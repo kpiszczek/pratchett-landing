@@ -575,7 +575,7 @@ a:focus {
         We hide the hint until presentation is started and from browsers not supporting
         impress.js, as they will have a linear scrollable view ...
     */
-    display: none;
+    /*display: none;*/
 
     /*
         ... and give it some fixed position and nice styles.
@@ -633,12 +633,13 @@ a:focus {
 /*
     ... and we will show it when the first step (with id 'bored') is active.
 */
-.impress-on-bored .hint {
+.impress-on-prolog .hint {
     /*
         We remove the transparency and position the hint in its default fixed
         position.
     */
     opacity: 1;
+    font-family: 'Roboto Slab', serif;
 
     -webkit-transform: translateY(0px);
     -moz-transform:    translateY(0px);
