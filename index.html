@@ -18,6 +18,10 @@
 
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Courgette&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/validationEngine.jquery.css">
+    
     <style>
     body {
     	background: #feffe8; /* Old browsers */
@@ -66,6 +70,12 @@
     }
     h3 {
         font-size: 1.5em;
+    }
+    .form {
+    	font-size: 0.5em;
+    }
+    .option {
+    	display: "none";
     }
     </style>
 </head>
@@ -154,7 +164,117 @@
         <div style="text-align: center">
             <h2>Zaprasza
     		Pratchett.pl</h2>
-        </div>
+        </div>class
+    </div>
+    <div id="rejestracja" class="step" data-x="0" data-y="10000" data-z="0" data-rotate-z="-180" data-rotate-x="270">
+    	<div class="form">
+    		<form id="registration" name="registration" method="post" accept-charset="utf-8">
+    			<div class="form-field">
+    				<span class="form_error"></span>
+    				<label for="imię">Imię:</label>
+    				<span><input type="text" name="imię"></span>
+    			</div>
+    			<div class="form-field">
+    				<span class="form_error"></span>
+    				<label for="nazwisko">Nazwisko:</label>
+    				<span><input type="text" name="nazwisko"></span>
+    			</div>
+    			<div class="form-field">
+    				<span class="form_error"></span>
+    				<label for="nick">Nick:</label>
+    				<span><input type="text" name="nick"></span>
+    			</div>
+    			<div class="form-field">
+    				<span class="form_error"></span>
+    				<label for="telefon">Telefon:</label>
+    				<span><input type="text" name="telefon"></span>
+    			</div>
+    			<div class="form-field">
+    				<span class="form_error"></span>
+    				<label for="email">E-mail:</label>
+    				<span><input type="email" name="email"></span>
+    			</div>
+    			<div class="form-field">
+    				<span class="form_error"></span>
+    				<label for="miejscowość-kraj">Miejscowość/kraj:</label>
+    				<span><input type="text" name="miejscowość-kraj"></span>
+    			</div>
+    			<div class="form-field">
+    				<label for="gatunek">Gatunek:</label>
+    				<span><select name="gatunek">
+					  <option value="Człowiek">Człowiek</option>
+					  <option value="Wampir">Wampir</option>
+					  <option value="Zombie">Zombie</option>
+					  <option value="Igor">Igor</option>
+					  <option value="Troll">Troll</option>
+					  <option value="Krasnolud">Krasnolud</option>
+					  <option value="Golem">Golem</option>
+					  <option value="Goblin">Goblin</option>
+					  <option value="Nac Mac Feegle">Nac Mac Feegle</option>
+					  <option value="Gnom">Gnom</option>
+					  <option value="Driada">Driada</option>
+					  <option value="Elf">Elf</option>
+					  <option value="Gargulec">Gargulec</option>
+					  <option value="Postać Antropomorficzna">Postać Antropomorficzna</option>
+					  <option value="Bibliotekarz">Bibliotekarz</option>
+					  <option value="Inny">Inny</option>
+					</select></span>
+    			</div>
+    			<div class="form-field">
+    				<label for="niepełnoletni">Osoba niepełnoletnia:</label>
+    				<span><input type="checkbox" name="niepełnoletni"></span>
+    			</div>
+    			<div class="form-field">
+    				<label for="konwent-tshirt">Chcę koszulkę konwentową:</label>
+    				<span><input type="checkbox" name="konwent-tshirt"></span>
+    			</div>
+    			<div class="form-field konwent-tshirt-option option">
+    				<label for="konwent-tshirt-imie">Chcę imie na koszulce:</label>
+    				<span><input type="checkbox" name="konwent-tshirt-imie"></span>
+    			</div>
+    			<div class="form-field konwent-tshirt-option option">
+    				<label for="konwent-tshirt-rozmiar">Rozmiar:</label>
+    				<span><select name="konwent-tshirt-rozmiar">
+    					<option value="S">S</option>
+    					<option value="M">M</option>
+    					<option value="L">L</option>
+    					<option value="XL">XL</option>
+    				</select></span>
+    			</div>
+    			<div class="form-field">
+    				<label for="smok-tshirt">Chcę koszulkę ze smokiem:</label>
+    				<span><input type="checkbox" name="smok-tshirt"></span>
+    			</div>
+    			<div class="form-field smok-tshirt-option option">
+    				<label for="smok-tshirt-imie">Chcę imie na koszulce:</label>
+    				<span><input type="checkbox" name="smok-tshirt-imie"></span>
+    			</div>
+    			<div class="form-field smok-tshirt-option option">
+    				<label for="smok-tshirt-rozmiar">Rozmiar:</label>
+    				<span><select name="smok-tshirt-rozmir">
+    					<option value="S">S</option>
+    					<option value="M">M</option>
+    					<option value="L">L</option>
+    					<option value="XL">XL</option>
+    				</select></span>
+    			</div>
+    			<div class="form-field">
+    				<label for="jedzenie">Jedzenie:</label>
+    				<span><select name="jedzenie">
+    					<option value="anything">Jem wszsystko</option>
+    					<option value="vegeterian">Nie jem mięsa</option>
+    					<option value="allergic">Inne (uczulenie, gluteny itp.)</option>
+    				</select></span>
+    			</div>
+    			<div class="form-field">
+    				<label for="spanie">Spanie:</label>
+    				<span><select name="spanie">
+    					<option value="szkoła">Śpię w szkole</option>
+    					<option value="własny">Własny nocleg</option>
+    				</select></span>
+    			</div>
+    		</form>
+    	</div>
     </div>
 </div>
 <div class="hint">      
@@ -171,5 +291,7 @@ if ("ontouchstart" in document.documentElement) {
 <script src="js/impress.js"></script>
 <script>impress().init();</script>
 <script src="js/stepper.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<script src="js/form-actions.js"></script>
 </body>
 </html>
